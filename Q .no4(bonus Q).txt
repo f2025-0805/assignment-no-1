@@ -1,0 +1,23 @@
+nclude <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    
+    // Get input from user
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+    
+    cout << "\nOriginal values: a = " << a << ", b = " << b << endl;
+    
+    // Swap using arithmetic operations
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    
+    cout << "After swap: a = " << a << ", b = " << b << endl;
+    
+    return 0;
+}
