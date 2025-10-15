@@ -1,0 +1,46 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int eng, math, urdu, hist, cs;
+    
+    cout << "Enter marks for 5 subjects:\n";
+    cout << "English: ";
+    cin >> eng;
+    cout << "Math: ";
+    cin >> math;
+    cout << "urdu: ";
+    cin >> urdu;
+    cout << "History: ";
+    cin >> hist;
+    cout << "Computer Science: ";
+    cin >> cs;
+    
+    int total = eng + math + urdu + hist + cs;
+    float percent = total / 5.0;
+    
+    string grade;
+    if(percent >= 90) grade = "A+";
+    else if(percent >= 80) grade = "A";
+    else if(percent >= 70) grade = "B";
+    else if(percent >= 60) grade = "C";
+    else if(percent >= 50) grade = "D";
+    else grade = "F";
+    
+    cout << fixed << setprecision(2);
+    cout << "\n----------- REPORT CARD -----------\n";
+    cout << left << setw(20) << "Subject" << "Marks\n";
+    cout << left << setw(20) << "English" << eng << endl;
+    cout << left << setw(20) << "Math" << math << endl;
+    cout << left << setw(20) << "urdu" << urdu << endl;
+    cout << left << setw(20) << "History" << hist << endl;
+    cout << left << setw(20) << "Computer Science" << cs << endl;
+    cout << "-----------------------------------\n";
+    cout << left << setw(20) << "Total" << total << "/500\n";
+    cout << left << setw(20) << "Percentage" << percent << "%\n";
+    cout << left << setw(20) << "Grade" << grade << endl;
+    cout << left << setw(20) << "Result" << ((percent >= 50) ? "PASS" : "FAIL") << endl;
+    
+    return 0;
+}
