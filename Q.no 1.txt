@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double x, y;
+    
+    cout << "Enter first floating point number: ";
+    cin >> x;
+    cout << "Enter second floating point number: ";
+    cin >> y;
+    
+    cout << fixed << setprecision(3);
+    cout << "\n--- Results with Floating Point Numbers ---" << endl;
+    cout << "Sum: " << x << " + " << y << " = " << (x + y) << endl;
+    cout << "Difference: " << x << " - " << y << " = " << (x - y) << endl;
+    cout << "Product: " << x << " * " << y << " = " << (x * y) << endl;
+    cout << "Quotient: " << x << " / " << y << " = " << (x / y) << endl;
+    
+    // Cast to integers
+    int a = (int)x;
+    int b = (int)y;
+    
+    cout << "\n--- Results after Casting to Integers ---" << endl;
+    cout << "Sum: " << a << " + " << b << " = " << (a + b) << endl;
+    cout << "Difference: " << a << " - " << b << " = " << (a - b) << endl;
+    cout << "Product: " << a << " * " << b << " = " << (a * b) << endl;
+    cout << "Quotient: " << a << " / " << b << " = " << (a / b) << endl;
+    
+    // Differences explanation:
+    /*
+    1. Truncation: Decimal parts are chopped off (3.7 → 3)
+    2. Integer division: Fractional results are lost (5/2 = 2, not 2.5)
+    3. No decimal places in output for integers
+    */
+    
+    return 0;
+}
