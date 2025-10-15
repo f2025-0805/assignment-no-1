@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    
+    cout << "Enter three integers: ";
+    cin >> a >> b >> c;
+    
+    // Find largest number
+    int largest;
+    if (a >= b && a >= c) {
+        largest = a;
+    } else if (b >= a && b >= c) {
+        largest = b;
+    } else {
+        largest = c;
+    }
+    
+    // Find smallest number
+    int smallest;
+    if (a <= b && a <= c) {
+        smallest = a;
+    } else if (b <= a && b <= c) {
+        smallest = b;
+    } else {
+        smallest = c;
+    }
+    
+    // Display results
+    cout << "\nResults:" << endl;
+    cout << "Largest number: " << largest << endl;
+    cout << "Smallest number: " << smallest << endl;
+    
+    // Check equality
+    if (a == b && b == c) {
+        cout << "All numbers are equal." << endl;
+    } else {
+        cout << "The numbers are not all equal." << endl;
+    }
+    
+    return 0;
+}
